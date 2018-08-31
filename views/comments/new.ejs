@@ -1,0 +1,21 @@
+<% include ../partials/header.ejs %>
+
+<p class="h1 text-center">Add a new comment to <%=campground.name%></p>
+
+<!-- <div class="row"> -->
+    <form class="form mx-auto bg-light" action="/campgrounds/show/<%=campground._id%>" method="post" style="width:50%">
+
+
+    <div class="form-group">
+      <label for="description">Comment</label>
+        <textarea class="form-control" type="text" name="comment[text]" placeholder="Comment"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    </form>
+<!-- </div> -->
+
+
+
+  <a class="btn btn-lg" href="/campgrounds">Go back</a>
+<% include ../partials/footer.ejs %>

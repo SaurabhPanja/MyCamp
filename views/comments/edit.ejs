@@ -1,0 +1,23 @@
+<% include ../partials/header.ejs %>
+
+<p class="h1 text-center">Edit your comment</p>
+
+<!-- <div class="row"> -->
+    <form class="form mx-auto bg-light"
+    action="/campgrounds/show/<%=campground_id%>/comments/<%=comment._id%>?_method=PUT"
+    method="post" style="width:50%">
+
+
+    <div class="form-group">
+      <label for="description">Comment</label>
+        <textarea class="form-control" type="text" name="comment[text]"><%=comment.text%></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    </form>
+<!-- </div> -->
+
+
+
+  <a class="btn btn-lg" href="/campgrounds">Go back</a>
+<% include ../partials/footer.ejs %>
