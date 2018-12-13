@@ -59,6 +59,6 @@ app.get("*",function (req,res) {
   res.send("Error 404");
 });
 
-app.listen(5000,function () {
+app.listen(process.env.PORT,process.env.IP,function () {
   console.log("Server running on port 5000");
 });
